@@ -12,8 +12,14 @@ cask "glint" do
 
   app "Glint.app"
 
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{appdir}}/Glint.app"]
+  end
+
   caveats <<~EOS
     This preview build is ad-hoc signed and not notarized.
-    macOS may require you to allow Glint in System Settings > Privacy & Security before its first launch.
+    The cask removes com.apple.quarantine after installation so Gatekeeper does not block the first launch.
+    Only install this experimental cask from the project-controlled Tap.
   EOS
 end
