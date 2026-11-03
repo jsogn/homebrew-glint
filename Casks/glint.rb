@@ -1,6 +1,6 @@
 cask "glint" do
-  version "0.7.6"
-  sha256 "80ad8a810261a9f0a679ae9287351b53a22cab5dba0f822dfcf5c6347ffb0107"
+  version "0.8.0"
+  sha256 "0971a278044f495d8845e94db5163de6782dc66e7e3c926ee46349a60f9414d9"
 
   url "https://github.com/jsogn/Glint/releases/download/v#{version}/Glint-#{version}-macOS-arm64.dmg"
   name "Glint"
